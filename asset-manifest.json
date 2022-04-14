@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/everlabs_tt/static/css/main.5ea837dc.css",
+    "main.js": "/everlabs_tt/static/js/main.9204a509.js",
+    "index.html": "/everlabs_tt/index.html",
+    "main.5ea837dc.css.map": "/everlabs_tt/static/css/main.5ea837dc.css.map",
+    "main.9204a509.js.map": "/everlabs_tt/static/js/main.9204a509.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ea837dc.css",
+    "static/js/main.9204a509.js"
+  ]
+}
