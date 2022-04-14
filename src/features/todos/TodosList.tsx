@@ -70,13 +70,31 @@ const TodosList: React.FC = () => {
   return (
     <>
       <div className='filter-buttons'>
-        <button onClick={e => setSearchParams({})} className='filter-buttons__button'>
+        <button
+          onClick={e => setSearchParams({})}
+          className={classNames(
+            'filter-buttons__button',
+            { 'filter-buttons__button--selected': filter === ''}
+          )}
+        >
           All
         </button>
-        <button onClick={e => setSearchParams({ filter: 'todo' })} className='filter-buttons__button'>
+        <button
+          onClick={e => setSearchParams({ filter: 'todo' })}
+          className={classNames(
+            'filter-buttons__button',
+            { 'filter-buttons__button--selected': filter === 'todo'}
+          )}
+        >
           Todo
         </button>
-        <button onClick={e => setSearchParams({ filter: 'done' })} className='filter-buttons__button'>
+        <button
+          onClick={e => setSearchParams({ filter: 'done' })}
+          className={classNames(
+            'filter-buttons__button',
+            { 'filter-buttons__button--selected': filter === 'done'}
+          )}
+        >
           Done
         </button>
       </div>

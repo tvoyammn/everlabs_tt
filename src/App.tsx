@@ -32,7 +32,6 @@ function App() {
           <Route path='/todos' element={<TodosList />} />
           <Route path='/todos/:todoId' element={<TodoItem />} />
           <Route path='/photos'element={<Photos />} />
-          <Route index element={<p>Home Page</p>} />
         </Routes>
       </main>
     </>

@@ -12,6 +12,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 
+  @media screen and (max-width: 1440px) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;

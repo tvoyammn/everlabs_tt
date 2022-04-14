@@ -8,6 +8,10 @@
   &__button {
     @extend %form-button;
     height: 20px;
+
+    &--selected {
+      background-color: gray;
+    }
   }
 }
 
