@@ -1,0 +1,50 @@
+@import '../../styles/placeholders';
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  &__button {
+    @extend %form-button;
+    height: 20px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__item-checkbox {
+    transform: scale(1.5);
+  }
+
+  &__item-text {
+    text-decoration: none;
+    @extend %text;
+
+    &--completed {
+      text-decoration: line-through;
+    }
+  }
+
+  &__item-button {
+    border: none;
+    width: 24px;
+    height: 24px;
+    color: white;
+    background-color: #EB5757;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

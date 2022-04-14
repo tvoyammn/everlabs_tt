@@ -1,0 +1,13 @@
+@import './placeholders';
+
+.form {
+  @extend %form;
+
+  &__text-input {
+    height: 20px;
+  }
+
+  &__button {
+    @extend %form-button;
+  }
+}

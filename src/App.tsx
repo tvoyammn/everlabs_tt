@@ -1,57 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import classNames from 'classnames';
+
+import TodosList from './features/todos/TodosList';
+import TodoItem from './features/todo/Todo';
+import Photos from './features/photos/Photos';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <header className='header'>
+        <nav className='header__nav'>
+          <NavLink
+            to='todos'
+            className={({ isActive }) => classNames('header__link', { 'header__link--active': isActive })}
           >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+            Todos
+          </NavLink>
+          <NavLink
+            to='photos'
+            className={({ isActive }) => classNames('header__link', { 'header__link--active': isActive })}
           >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+            Photos
+          </NavLink>
+        </nav>
       </header>
-    </div>
+
+      <main className='main'>
+        <Routes>
+          <Route path='/todos' element={<TodosList />} />
+          <Route path='/todos/:todoId' element={<TodoItem />} />
+          <Route path='/photos'element={<Photos />} />
+          <Route index element={<p>Home Page</p>} />
+        </Routes>
+      </main>
+    </>
   );
 }
 
