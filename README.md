@@ -1,4 +1,4 @@
-# Project Title
+# Everlabs TT
 
 This is test task for Everlabs.
 - [DEMO LINK](https://tvoyammn.github.io/everlabs_tt/)
